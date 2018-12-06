@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ftc_projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="data_all">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
+    <Property Name="RSS" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ftc_projectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="data_all" EntityType="Self.data_all" />
+    <EntitySet Name="data_position_info" EntityType="ftc_projectModel.data_position_info" />
+    <EntitySet Name="data_path" EntityType="ftc_projectModel.data_path" />
+    <EntitySet Name="settings_configure" EntityType="ftc_projectModel.settings_configure" />
+    <EntitySet Name="settings_position" EntityType="ftc_projectModel.settings_position" />
+    <EntitySet Name="fuzzy_label" EntityType="ftc_projectModel.fuzzy_label" />
+    <EntitySet Name="fuzzy_membership" EntityType="ftc_projectModel.fuzzy_membership" />
+  </EntityContainer>
+  <EntityType Name="data_position_info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="data_path">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="settings_configure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="settings_position">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <Property Name="X" Type="Int32" Nullable="false" />
+    <Property Name="Y" Type="Int32" Nullable="false" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fuzzy_label">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AP" Type="Int32" Nullable="false" />
+    <Property Name="RP" Type="Int32" Nullable="false" />
+    <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fuzzy_membership">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AP" Type="Int32" Nullable="false" />
+    <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Samples" Type="Int32" Nullable="false" />
+    <Property Name="Max" Type="Int32" Nullable="false" />
+    <Property Name="Min" Type="Int32" Nullable="false" />
+    <Property Name="Mean" Type="Double" Nullable="false" />
+    <Property Name="SD" Type="Double" Nullable="false" />
+  </EntityType>
+</Schema>

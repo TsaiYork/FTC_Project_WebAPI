@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ftc_projectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="data_all">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="BeaconMinor" Type="int" Nullable="false" />
+          <Property Name="RSS" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="data_path">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="data_position_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fuzzy_label">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AP" Type="int" Nullable="false" />
+          <Property Name="RP" Type="int" Nullable="false" />
+          <Property Name="Label" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fuzzy_membership">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AP" Type="int" Nullable="false" />
+          <Property Name="Label" Type="text" Nullable="false" />
+          <Property Name="Samples" Type="int" Nullable="false" />
+          <Property Name="Max" Type="int" Nullable="false" />
+          <Property Name="Min" Type="int" Nullable="false" />
+          <Property Name="Mean" Type="float" Nullable="false" />
+          <Property Name="SD" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="settings_configure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="text" Nullable="false" />
+          <Property Name="Name" Type="text" Nullable="false" />
+          <Property Name="Value" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="settings_position">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="X" Type="int" Nullable="false" />
+          <Property Name="Y" Type="int" Nullable="false" />
+          <Property Name="Area" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ftc_projectModelStoreContainer">
+          <EntitySet Name="data_all" EntityType="Self.data_all" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_path" EntityType="Self.data_path" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="data_position_info" EntityType="Self.data_position_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fuzzy_label" EntityType="Self.fuzzy_label" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="fuzzy_membership" EntityType="Self.fuzzy_membership" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="settings_configure" EntityType="Self.settings_configure" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="settings_position" EntityType="Self.settings_position" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ftc_projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="data_all">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
+          <Property Name="RSS" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ftc_projectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="data_all" EntityType="Self.data_all" />
+          <EntitySet Name="data_position_info" EntityType="ftc_projectModel.data_position_info" />
+          <EntitySet Name="data_path" EntityType="ftc_projectModel.data_path" />
+          <EntitySet Name="settings_configure" EntityType="ftc_projectModel.settings_configure" />
+          <EntitySet Name="settings_position" EntityType="ftc_projectModel.settings_position" />
+          <EntitySet Name="fuzzy_label" EntityType="ftc_projectModel.fuzzy_label" />
+          <EntitySet Name="fuzzy_membership" EntityType="ftc_projectModel.fuzzy_membership" />
+        </EntityContainer>
+        <EntityType Name="data_position_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="data_path">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="settings_configure">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="settings_position">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="X" Type="Int32" Nullable="false" />
+          <Property Name="Y" Type="Int32" Nullable="false" />
+          <Property Name="Area" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fuzzy_label">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AP" Type="Int32" Nullable="false" />
+          <Property Name="RP" Type="Int32" Nullable="false" />
+          <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="fuzzy_membership">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AP" Type="Int32" Nullable="false" />
+          <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Samples" Type="Int32" Nullable="false" />
+          <Property Name="Max" Type="Int32" Nullable="false" />
+          <Property Name="Min" Type="Int32" Nullable="false" />
+          <Property Name="Mean" Type="Double" Nullable="false" />
+          <Property Name="SD" Type="Double" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ftc_projectModelStoreContainer" CdmEntityContainer="ftc_projectEntities">
+          <EntitySetMapping Name="data_all">
+            <EntityTypeMapping TypeName="ftc_projectModel.data_all">
+              <MappingFragment StoreEntitySet="data_all">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="BeaconMinor" ColumnName="BeaconMinor" />
+                <ScalarProperty Name="RSS" ColumnName="RSS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data_position_info">
+            <EntityTypeMapping TypeName="ftc_projectModel.data_position_info">
+              <MappingFragment StoreEntitySet="data_position_info">
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="data_path">
+            <EntityTypeMapping TypeName="ftc_projectModel.data_path">
+              <MappingFragment StoreEntitySet="data_path">
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="settings_configure">
+            <EntityTypeMapping TypeName="ftc_projectModel.settings_configure">
+              <MappingFragment StoreEntitySet="settings_configure">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="settings_position">
+            <EntityTypeMapping TypeName="ftc_projectModel.settings_position">
+              <MappingFragment StoreEntitySet="settings_position">
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Y" ColumnName="Y" />
+                <ScalarProperty Name="X" ColumnName="X" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fuzzy_label">
+            <EntityTypeMapping TypeName="ftc_projectModel.fuzzy_label">
+              <MappingFragment StoreEntitySet="fuzzy_label">
+                <ScalarProperty Name="Label" ColumnName="Label" />
+                <ScalarProperty Name="RP" ColumnName="RP" />
+                <ScalarProperty Name="AP" ColumnName="AP" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fuzzy_membership">
+            <EntityTypeMapping TypeName="ftc_projectModel.fuzzy_membership">
+              <MappingFragment StoreEntitySet="fuzzy_membership">
+                <ScalarProperty Name="SD" ColumnName="SD" />
+                <ScalarProperty Name="Mean" ColumnName="Mean" />
+                <ScalarProperty Name="Min" ColumnName="Min" />
+                <ScalarProperty Name="Max" ColumnName="Max" />
+                <ScalarProperty Name="Samples" ColumnName="Samples" />
+                <ScalarProperty Name="Label" ColumnName="Label" />
+                <ScalarProperty Name="AP" ColumnName="AP" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

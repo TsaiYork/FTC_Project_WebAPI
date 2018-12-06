@@ -1,0 +1,14 @@
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\Data_Access.dll.config
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\Data_Access.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\Data_Access.pdb
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\EntityFramework.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\EntityFramework.xml
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\zh-Hant\EntityFramework.resources.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\bin\Release\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\obj\Release\Data_Access.csprojAssemblyReference.cache
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\obj\Release\Data_Access.csproj.CoreCompileInputs.cache
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\obj\Release\Data_Access.csproj.CopyComplete
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\obj\Release\Data_Access.dll
+C:\Users\maxxz\Desktop\台塑網_交接修改文件\ftc_project_api\ftc_project_api\Data_Access\obj\Release\Data_Access.pdb

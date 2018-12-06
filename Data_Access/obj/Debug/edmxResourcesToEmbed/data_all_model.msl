@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ftc_projectModelStoreContainer" CdmEntityContainer="ftc_projectEntities">
+    <EntitySetMapping Name="data_all">
+      <EntityTypeMapping TypeName="ftc_projectModel.data_all">
+        <MappingFragment StoreEntitySet="data_all">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="BeaconMinor" ColumnName="BeaconMinor" />
+          <ScalarProperty Name="RSS" ColumnName="RSS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="data_position_info">
+      <EntityTypeMapping TypeName="ftc_projectModel.data_position_info">
+        <MappingFragment StoreEntitySet="data_position_info">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="data_path">
+      <EntityTypeMapping TypeName="ftc_projectModel.data_path">
+        <MappingFragment StoreEntitySet="data_path">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="settings_configure">
+      <EntityTypeMapping TypeName="ftc_projectModel.settings_configure">
+        <MappingFragment StoreEntitySet="settings_configure">
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="settings_position">
+      <EntityTypeMapping TypeName="ftc_projectModel.settings_position">
+        <MappingFragment StoreEntitySet="settings_position">
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ftc_project_api", "ftc_project_api\ftc_project_api.csproj", "{FBEFE693-A534-4B1A-9F19-0139494F336E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data_Access", "Data_Access\Data_Access.csproj", "{1020F1D2-8121-4A93-A1ED-E3768914B6C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBEFE693-A534-4B1A-9F19-0139494F336E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEFE693-A534-4B1A-9F19-0139494F336E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEFE693-A534-4B1A-9F19-0139494F336E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEFE693-A534-4B1A-9F19-0139494F336E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1020F1D2-8121-4A93-A1ED-E3768914B6C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1020F1D2-8121-4A93-A1ED-E3768914B6C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1020F1D2-8121-4A93-A1ED-E3768914B6C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1020F1D2-8121-4A93-A1ED-E3768914B6C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F60E181F-BEC0-4398-A11A-F5A92EB0EC8B}
+	EndGlobalSection
+EndGlobal
