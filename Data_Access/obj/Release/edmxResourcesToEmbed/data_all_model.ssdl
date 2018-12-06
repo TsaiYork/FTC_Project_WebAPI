@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TimeStamp" Type="datetime" Nullable="false" />
     <Property Name="Position" Type="int" Nullable="false" />
     <Property Name="BeaconMinor" Type="int" Nullable="false" />
@@ -32,8 +32,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AP" Type="int" Nullable="false" />
-    <Property Name="RP" Type="int" Nullable="false" />
+    <Property Name="BeaconMinor" Type="int" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
     <Property Name="Label" Type="text" Nullable="false" />
   </EntityType>
   <EntityType Name="fuzzy_membership">
@@ -41,7 +41,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AP" Type="int" Nullable="false" />
+    <Property Name="BeaconMinor" Type="int" Nullable="false" />
     <Property Name="Label" Type="text" Nullable="false" />
     <Property Name="Samples" Type="int" Nullable="false" />
     <Property Name="Max" Type="int" Nullable="false" />

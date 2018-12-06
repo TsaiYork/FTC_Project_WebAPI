@@ -11,7 +11,18 @@ namespace ftc_project_api.Models
         public class Format_Detail
         {
             public int Id { get; set; }
-            public int AP { get; set; }
+            public int BeaconMinor { get; set; }
+            public string Label { get; set; }
+            public int Samples { get; set; }
+            public int Max { get; set; }
+            public int Min { get; set; }
+            public double Mean { get; set; }
+            public double SD { get; set; }
+        }
+
+        public class Create_Detail
+        {
+            public int BeaconMinor { get; set; }
             public string Label { get; set; }
             public int Samples { get; set; }
             public int Max { get; set; }
@@ -25,12 +36,12 @@ namespace ftc_project_api.Models
             using (ftc_projectEntities entities = new ftc_projectEntities())
             {
                 var L2Enty = from c in entities.fuzzy_membership.AsNoTracking()
-                             orderby c.AP
+                             orderby c.BeaconMinor
                              select c;
 
                 return L2Enty.Select(s => new Format_Detail()
                 {
-                    AP = s.AP,
+                    BeaconMinor = s.BeaconMinor,
                     Label = s.Label,
                     Max = s.Max,
                     Min = s.Min,

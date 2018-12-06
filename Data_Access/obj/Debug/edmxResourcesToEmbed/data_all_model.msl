@@ -52,5 +52,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="fuzzy_label">
+      <EntityTypeMapping TypeName="ftc_projectModel.fuzzy_label">
+        <MappingFragment StoreEntitySet="fuzzy_label">
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="BeaconMinor" ColumnName="BeaconMinor" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fuzzy_membership">
+      <EntityTypeMapping TypeName="ftc_projectModel.fuzzy_membership">
+        <MappingFragment StoreEntitySet="fuzzy_membership">
+          <ScalarProperty Name="BeaconMinor" ColumnName="BeaconMinor" />
+          <ScalarProperty Name="SD" ColumnName="SD" />
+          <ScalarProperty Name="Mean" ColumnName="Mean" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Samples" ColumnName="Samples" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

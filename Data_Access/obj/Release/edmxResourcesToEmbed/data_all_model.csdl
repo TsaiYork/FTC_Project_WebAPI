@@ -60,21 +60,21 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AP" Type="Int32" Nullable="false" />
-    <Property Name="RP" Type="Int32" Nullable="false" />
     <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="fuzzy_membership">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AP" Type="Int32" Nullable="false" />
     <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Samples" Type="Int32" Nullable="false" />
     <Property Name="Max" Type="Int32" Nullable="false" />
     <Property Name="Min" Type="Int32" Nullable="false" />
     <Property Name="Mean" Type="Double" Nullable="false" />
     <Property Name="SD" Type="Double" Nullable="false" />
+    <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

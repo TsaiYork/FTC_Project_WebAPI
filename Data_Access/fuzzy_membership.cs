@@ -15,12 +15,12 @@ namespace Data_Access
     public partial class fuzzy_membership
     {
         public int Id { get; set; }
-        public int AP { get; set; }
         public string Label { get; set; }
         public int Samples { get; set; }
         public int Max { get; set; }
         public int Min { get; set; }
         public double Mean { get; set; }
         public double SD { get; set; }
+        public int BeaconMinor { get; set; }
     }
 }

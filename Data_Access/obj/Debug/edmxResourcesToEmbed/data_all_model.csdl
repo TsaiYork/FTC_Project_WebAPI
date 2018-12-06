@@ -16,6 +16,8 @@
     <EntitySet Name="data_path" EntityType="ftc_projectModel.data_path" />
     <EntitySet Name="settings_configure" EntityType="ftc_projectModel.settings_configure" />
     <EntitySet Name="settings_position" EntityType="ftc_projectModel.settings_position" />
+    <EntitySet Name="fuzzy_label" EntityType="ftc_projectModel.fuzzy_label" />
+    <EntitySet Name="fuzzy_membership" EntityType="ftc_projectModel.fuzzy_membership" />
   </EntityContainer>
   <EntityType Name="data_position_info">
     <Key>
@@ -51,6 +53,28 @@
     <Property Name="Position" Type="Int32" Nullable="false" />
     <Property Name="X" Type="Int32" Nullable="false" />
     <Property Name="Y" Type="Int32" Nullable="false" />
-    <Property Name="Area" Type="Int32" />
+    <Property Name="Area" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fuzzy_label">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="fuzzy_membership">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Label" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Samples" Type="Int32" Nullable="false" />
+    <Property Name="Max" Type="Int32" Nullable="false" />
+    <Property Name="Min" Type="Int32" Nullable="false" />
+    <Property Name="Mean" Type="Double" Nullable="false" />
+    <Property Name="SD" Type="Double" Nullable="false" />
+    <Property Name="BeaconMinor" Type="Int32" Nullable="false" />
   </EntityType>
 </Schema>

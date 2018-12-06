@@ -15,8 +15,8 @@ namespace Data_Access
     public partial class fuzzy_label
     {
         public int Id { get; set; }
-        public int AP { get; set; }
-        public int RP { get; set; }
         public string Label { get; set; }
+        public int BeaconMinor { get; set; }
+        public int Position { get; set; }
     }
 }
