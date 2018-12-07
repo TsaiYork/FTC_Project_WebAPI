@@ -27,6 +27,13 @@ namespace ftc_project_api.Controllers
         }
 
         [Route("api/data_all")]
+        public IEnumerable<data_allModel.Format_Detail> GetByPositionAndMinor(int Position, int BeaconMinor)
+        {
+            data_allModel model = new data_allModel();
+            return model.GetByPostionAndMinor(Position,BeaconMinor);
+        }
+
+        [Route("api/data_all")]
         public HttpResponseMessage Post([FromBody] data_allModel.Create_Detail dataModel)
         {
             try

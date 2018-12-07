@@ -46,5 +46,37 @@ namespace ftc_project_api.Controllers
             }
         }
 
+
+        [Route("api/fuzzy_membership")]
+        public HttpResponseMessage Put([FromBody]fuzzy_membershipModel.Create_Detail dataModel)
+        {
+            try
+            {
+                using (ftc_projectEntities entities = new ftc_projectEntities())
+                {
+
+                    var entity = entities.fuzzy_membership.FirstOrDefault(e => e.BeaconMinor == dataModel.BeaconMinor&&e.Label.Contains(dataModel.Label));
+                    if (entity == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "data Not Gound");
+                    }
+                    else
+                    {
+                        entity.Samples = dataModel.Samples;
+                        entity.Max = dataModel.Max;
+                        entity.Min = dataModel.Min;
+                        entity.Mean = dataModel.Mean;
+                        entity.SD = entity.SD;
+                        entities.SaveChanges();
+                        return Request.CreateResponse(HttpStatusCode.OK, entity);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
     }
 }

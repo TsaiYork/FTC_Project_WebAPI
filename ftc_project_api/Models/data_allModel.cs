@@ -62,5 +62,25 @@ namespace ftc_project_api.Models
                 }).ToList<Format_Detail>();
             }
         }
+
+        public List<Format_Detail> GetByPostionAndMinor(int Position, int BeaconMinor)
+        {
+            using (ftc_projectEntities entities = new ftc_projectEntities())
+            {
+                var L2Enty = from c in entities.data_all.AsNoTracking()
+                             where c.Position == Position && c.BeaconMinor == BeaconMinor
+                             orderby c.TimeStamp
+                             select c;
+
+                return L2Enty.Select(s => new Format_Detail()
+                {
+                    Id = s.Id,
+                    TimeStamp = s.TimeStamp,
+                    Position = s.Position,
+                    BeaconMinor = s.BeaconMinor,
+                    RSS = s.RSS
+                }).ToList<Format_Detail>();
+            }
+        }
     }
 }

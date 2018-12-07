@@ -100,10 +100,10 @@
       <publishTime>09/11/2013 09:10:04</publishTime>
     </File>
     <File Include="bin/ftc_project_api.dll">
-      <publishTime>12/06/2018 21:37:05</publishTime>
+      <publishTime>12/07/2018 15:37:48</publishTime>
     </File>
     <File Include="bin/ftc_project_api.pdb">
-      <publishTime>12/06/2018 21:37:05</publishTime>
+      <publishTime>12/07/2018 15:37:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>06/27/2017 12:59:34</publishTime>
